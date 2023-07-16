@@ -11,9 +11,9 @@ import com.example.securityapp.entities.User;
 @Component
 public class UserRepositoryImpl implements UserRepository {
     @Override
-    public Optional<UserDetails> findByEmail(String email) {
-        if (email.equals("foo@gmail.com")) {
-            UserDetails user = new User("user", "password",
+    public Optional<UserDetails> findByEmail(String username) {
+        if (username.equals("uuu")) {
+            UserDetails user = new User("uuu", "1234",
                     "foo@gmail.com",
                     new ArrayList<>());
             return Optional.of(user);

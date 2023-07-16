@@ -34,7 +34,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         final String authHeader = request.getHeader("Authorization");
         final String jwt;
         final String userEmail;
-        if (authHeader.isEmpty() || !authHeader.contains("Bearer ")) {
+        if (authHeader == null || authHeader.isEmpty() || !authHeader.contains("Bearer ")) {
             filterChain.doFilter(request, response);
             return;
         }
